@@ -21,6 +21,68 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 40px;
+          height: 24px;
+        }
+        
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: -6px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        input:checked + .slider {
+          background-color: #17922c;
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px #21f38a;
+        }
+        
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 24px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        </style>
+        
 </head>
 
 <body data-spy="scroll" data-target=".navbar-fixed-top">
@@ -80,61 +142,75 @@
     <div id="page-content">
         <section class="breadcrumb">
             <div class="container">
-                <h2>Get Quote</h2>
+                <h2>Assumptions</h2>
                 <ul>
                     <li><a href="index.html">Home</a> ></li>
-                    <li><a href="#">Get Quote</a></li>
+                    <li><a href="#">Green quote assumptions</a></li>
                 </ul>
             </div>
         </section>
         <section class="contact-us">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-md-8 col-md-offset-2">
                         <div class="form-box">
-                            <h2>Your basic quote</h2>                            
+                            <h2>Assumptions</h2>                            
                             <div class="form-content">
-                                <h4 style="text-align: center;">£20k home contents cover: <strong>£6.00</strong></h4>
-                                <h4 style="text-align: center;">£2k out of home cover: <strong>£4.5</strong></h4>
-                                <h4 style="text-align: center;">Accidental dmg.: <strong>Incl.</strong></h4>
-                                <h4 style="text-align: center;">Legal cover: <strong>Incl.</strong></h4>
-                                <h4 style="text-align: center;">Excess: <strong>£1.5</strong></h4>
-                                <div class="form-check">
-                                    <h3 style="text-align: center;"><b style="color: green;">£12.00</b>/mo</h3>
-                                </div>
-                                <br/>
+                                <h3>Here are few assumptions please verify before proceeding</h3>
+                                <div class="form-check form-switch" style="margin-left: 33%;">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">No Bankruptcy or CCJs</label><br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked1">No claims in Past 5 Years</label><br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked2">No convictions</label><br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked3">No Insurance Declines</label><br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked4">No Building Work</label><br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked5">No pending Legal Expenses</label> <br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked6">Having Solar Panels Installed</label> <br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked7">Using Eco-Friendly Electrical Devices</label> <br/>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked5">Avoid cutting trees</label> <br/>
+                                </div><br/>
                                 <div class="text-center">
-                                    <a class="btn-default" href="basic-assumption.html">Choose</a> <br/><br/>
-                                    <a class="btn-default" style="background-color: teal ;" href="basic-customization.html">Customise</a>
+                                    <a class="btn-default" href="green-customization.html">Back</a>
+                                    <a class="btn-default" href="green-details-cust.html">Proceed</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-2">
-                        <div class="form-box">
-                            <h2>Your green quote</h2>                            
-                            <div class="form-content">
-                                <h4 style="text-align: center;">£20k home contents cover: <strong>£6.00</strong></h4>
-                                <h4 style="text-align: center;">£2k out of home cover: <strong>£4.5</strong></h4>
-                                <h4 style="text-align: center;">Accidental dmg.: <strong>Incl.</strong></h4>
-                                <h4 style="text-align: center;">Legal cover: <strong>Incl.</strong></h4>
-                                <h4 style="text-align: center;">Excess: <strong>£1.5</strong></h4>
-                                <h4 style="text-align: center;">Green Cover: <strong>-£2</strong></h4>
-                                <div class="form-check">
-                                    <h3 style="text-align: center;"><b style="color: green;">£10.00</b>/mo</h3>
-                                </div>
-                                <br/>
-                                <div class="text-center">
-                                    <a class="btn-default" href="green-assumption.html">Choose</a> <br/><br/>
-                                    <a class="btn-default" style="background-color: teal ;" href="green-customization.html">Customise</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br/>
-                <div class="text-center">
-                    <a class="btn-default" href="getquote.html">Back</a>
                 </div>
             </div>
         </section>
